@@ -1,0 +1,1 @@
+Esta carpeta almacena los archivos CSV oficiales descargados o cargados manualmente. No cambies sus nombres después de importar.
