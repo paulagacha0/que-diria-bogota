@@ -1,0 +1,17 @@
+# Render Blueprint — versión de despliegue de ¿Qué dirIA Bogotá?
+# Comienza en Free para pruebas; para estar siempre activo, cambia a Starter en Render.
+services:
+  - type: web
+    name: que-diria-bogota
+    runtime: python
+    plan: free
+    buildCommand: echo "Aplicación estándar Python, sin dependencias externas"
+    startCommand: python server.py
+    healthCheckPath: /api/health
+    envVars:
+      - key: PUBLIC_DEPLOY
+        value: "1"
+      - key: OPEN_BROWSER
+        value: "0"
+      - key: PYTHON_VERSION
+        value: "3.12.8"
